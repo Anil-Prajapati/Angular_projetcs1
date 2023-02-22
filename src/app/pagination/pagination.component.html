@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="offset-sm-3 col-sm-4">
+            <input type="search" [(ngModel)]="searchText" placeholder="Serach the Item.." class="form-control m-2 p-2">
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="from-control" style="float: inline-end;">
+            <button class="btn btn-success m-2 p-1 " (click)="addCard()">Asc</button>
+            <button class="btn btn-success m-2 p-1" (click)="addCard()">Dsc</button>
+        </div>
+    </div>
+    <div class="row">
+        <ng-container *ngFor="let user of userDetails  
+        | paginate: { itemsPerPage: 4, currentPage: p }
+        | filter : searchText">
+            <div class="col-sm-3">
+                <div class="card">
+                    <img src={{user.image}} class="card-img-top" style="height: 150px;">
+                    <div class="card-body text-center">
+                        <h5>{{user.category}}</h5>
+                        <p>{{user.title}}</p>
+                        <p>Price:{{user.price}}</p>
+                        <p>ratting:{{user.rating.rate}}</p>
+                        <p>Count:{{user.rating.count}}</p>
+                        <button class="btn btn-primary">BUY</button>
+
+                        <button class="btn btn-success m-2 p-1" (click)="addCard()">AddCard</button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+</div>

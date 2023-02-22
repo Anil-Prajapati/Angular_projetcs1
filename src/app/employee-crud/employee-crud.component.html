@@ -1,0 +1,15 @@
+<div class="conatiner">
+    <div class="row">
+        <div class="col-sm-8">
+            <app-employee-list [employees]="employees"></app-employee-list>
+        </div>
+        <div class="col-sm-8">
+            <app-employee-add (addEvent)="senMessageView($event)"></app-employee-add>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <app-employee-cards [employees]="employees"></app-employee-cards>
+        </div>
+    </div>
+</div>

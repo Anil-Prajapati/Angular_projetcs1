@@ -1,0 +1,61 @@
+<!-- <div class="row ps-4 pe-4">
+    <div class="col-md-2 p-2" *ngFor="let user of users">
+        <div class="card text-center" style="height: 500px;">
+            <div class="card-header">{{user.category}}</div>
+            <div class=" card-body ">
+                <img src="{{user.image}} " class="img-thumbnail " alt="Cinque Terre " width="460 " height="245 " alt="... ">
+            </div>
+            <div class="card-footer">
+                <label>Price:{{user.price}}</label>&nbsp;
+                <button (click)="f1() " class="btn btn-primary pt-0 pb-1 float-right ">Buy Product</button>
+                <label class="foo-desc ">{{user.title}}</label>
+                <label>{{user.rating.rate}}</label><br>
+                <label>{{user.rating.count}}</label>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div>
+    <!-- this is the technic by table formating showing the data in you need the data is showing in the card formating and then it will be doing is the logic of the angular projects -->
+    <input type="checkbox" (change)="this.showTable=!this.showTable"> {{showTable? 'table':'card'}}
+</div>
+<div *ngIf="showTable;  else cardBlock">
+    <table id="customers">
+        <thead>
+            <tr>
+                <th *ngFor="let column of colvalue">
+                    {{column}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td *ngFor="let listproduct of user | keyvalue">
+                    {{listproduct.value}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- this is the card formating of the data  -->
+<ng-template #cardBlock>
+    <!-- this is he card formating of the filip -->
+    <div class="row ps-4 pe-4">
+        <div class="col-md-2 p-2" *ngFor="let user of users">
+            <div class="card text-center" style="height: 500px;">
+                <div class="card-header">{{user.category}}</div>
+                <div class=" card-body ">
+                    <img src="{{user.image}} " class="img-thumbnail " alt="Cinque Terre " width="460 " height="245 " alt="... ">
+                </div>
+                <div class="card-footer">
+                    <label>Price:{{user.price}}</label>&nbsp;
+                    <button (click)="f1() " class="btn btn-primary pt-0 pb-1 float-right ">Buy Product</button>
+                    <label class="foo-desc ">{{user.title}}</label>
+                    <label>{{user.rating.rate}}</label><br>
+                    <label>{{user.rating.count}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

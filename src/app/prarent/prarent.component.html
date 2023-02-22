@@ -1,0 +1,23 @@
+<h3 style="text-align: center; color: rebeccapurple; background-color: coral;">THIS IS THE MY PARENT CLASS</h3>
+<div class="conatiner border p-2">
+    <div class="row">
+        <div class="col-sm-5">
+            <p>THIS IS THE PRARENT A VALUES ={{a}}</p>
+            <p>THIS IS THE PRARENT B VALUES ={{b}}</p>
+            <p>MY NAME IS :{{name}}</p>
+            <p><input type="number" [(ngModel)]="b"></p>
+            <p><input type="number" [(ngModel)]="a"></p>
+
+            <div class="row m-2">
+                <div class="col-sm-6 border">
+                    <app-chiled1 [chileda]="a" [f1]="f1" [name]="name"></app-chiled1>
+                </div>
+                <div class="col-sm-6 border">
+                    <app-child2 [b]="b" [f1]="f1" [name]="name"></app-child2>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

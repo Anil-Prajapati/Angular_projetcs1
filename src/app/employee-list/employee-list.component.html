@@ -1,0 +1,18 @@
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Eid</th>
+                <th>Name</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees">
+                <td>{{emp.eid}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.sal}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

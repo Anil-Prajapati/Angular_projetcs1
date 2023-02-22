@@ -1,0 +1,68 @@
+<h5 style="text-align: center; background-color: rgb(47, 255, 0); color: red;">THIS IS THE PIPE API</h5>
+
+<p>{{name}}</p>
+<p>{{name | lowercase}}</p>
+<p>{{name | uppercase}}</p>
+<p>{{name | titlecase}}</p>
+
+
+<p>{{num}}</p>
+<p>{{num | currency: 'INR'}}</p>
+<p>{{num | currency: 'USD'}}</p>
+<p>{{num | currency: 'euro'}}</p>
+<p>{{num | currency: 'INR'}}</p>
+
+<p>{{today}}</p>
+<p>{{today | date:'fullDate'}}</p>
+<p>{{today | date:'mediumDate'}}</p>
+<p>{{today | date:'shortDate'}}</p>
+<p>{{today | date:'fullTime'}}</p>
+<p>{{today | date:'mediumTime'}}</p>
+<p>{{today | date:'shortTime'}}</p>
+<p>{{today | date:'dd-mm-yyyy'}}</p>
+<p>{{today | date:'dd/MM/yyyy'}}</p>
+<p>{{today | date:'MMMM-dd-yyyy'}}</p>
+<p>{{today | date:'MM-dd-yyyy'}}</p>
+<p>{{12.444444 | number :'3.2-5'}}</p>
+<p>{{151.15236 | number:'3.0-2'}}</p>
+<p>{{56.36 | percent }}</p>
+<p>{{888899 | percent }}</p>
+
+<p>{{employee | json}}</p>
+
+<p *ngFor="let entry of employee | keyvalue">
+    {{ entry.key }}---{{ entry.value }}
+</p>
+<hr>
+
+<!-- 1. Create a custom pipe(ordinal) that displays a cardinal number in ordinal format. -->
+<input [(ngModel)]="ordinate" type="number">
+<h3>This Is The nameprifix {{ordinate | nameprifix}}</h3>
+
+
+<!-- declare an array of employee objects. display them in a table.
+   create a custom pipe that will add 'mr. / miss.' before the employee name. -->
+
+<div class="conatiner">
+    <input type="text" [(ngModel)]="searchText">
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>rollNo</th>
+            <th>gender</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let emp of employees ">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name | tableMR : emp.gender}}</td>
+            <td>{{emp.rollNo}}</td>
+            <td>{{emp.gender}}</td>
+
+        </tr>
+    </tbody>
+</table>

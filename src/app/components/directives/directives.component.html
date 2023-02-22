@@ -1,0 +1,109 @@
+<!-- this is ngIf method method use for conditionla format -->
+<div *ngIf="n%2===0;  else oddblock">
+    this is the even = {{n}}
+</div>
+
+<ng-template #oddblock>
+    this is the Odd= {{n}}
+</ng-template>
+
+<!-- this is the for loop in angular -->
+<ul>
+    <li *ngFor="let cars of car">
+        {{cars}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let fuirts of fourit">
+        {{fuirts}}
+    </li>
+</ul>
+
+
+<select [(ngModel)]="selectControry">
+   <option *ngFor="let countrory of countries">
+    {{countrory}}
+   </option>
+</select>
+<p>You have Select contory:{{selectControry}}</p>
+
+<!-- browsers input browser and datalist id both are the same  -->
+
+<input list="browsers" placeholder="Search Your Country Name">
+<datalist id="browsers" [(ngModel)]="selectControry">
+    <select [(ngModel)]="selectControry">
+        <option *ngFor="let countrory of countries">
+         {{countrory}}
+        </option>
+     </select>
+</datalist>
+<br>
+<hr>
+
+<select [(ngModel)]="selectState">
+    <option *ngFor="let states of state" [value]="states.val">
+     {{states.name}}
+    </option>
+ </select>
+<p>You have Select Your State:{{selectState}}</p>
+
+<table>
+    <thead>
+        <tr>
+            <th scope="col">#Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Salary</th>
+            <th scope="col">PhoneNumber</th>
+        </tr>
+        <tr *ngFor="let stud of Student">
+            <td>{{stud.id}}</td>
+            <td>{{stud.name}}</td>
+            <td>{{stud.salary}}</td>
+            <td>{{stud.phoneNumber}}</td>
+        </tr>
+    </thead>
+</table>
+
+<!-- this is the switch case in angular -->
+<h1 [ngSwitch]="num">
+    <p *ngSwitchCase="'1'">Today Is Monday</p>
+    <p *ngSwitchCase="'2'">Today Is Tuesday </p>
+    <p *ngSwitchCase="'3'">Today Is Wedenesday </p>
+    <p *ngSwitchCase="'4'">Today Is Thursday </p>
+    <p *ngSwitchCase="'5'">Today Is Friday </p>
+    <p *ngSwitchCase="'6'">Today Is Saturday </p>
+    <p *ngSwitchCase="'0'">Today Is Sunday </p>
+    <p *ngSwitchDefault>Today Is InVailid Day</p>
+</h1>
+
+<hr>
+<!-- this is the static way to declead by the css -->
+<p [style.color]="n%2==0 ? 'blue':'red'">this is the apply static color in angular</p>
+<p [style.fontSize.px]="40">this is the apply static color in angular</p>
+<p [style.background-color]="flage? 'yellow':'blue'">this is the static background-color</p>
+
+<!-- this is the dyamic way to declead by the css -->
+<p [ngStyle]="n%2==0? {'color':'red',border:'2px dotted green'}:{'color':'red',border:'2px dotted cyan'}">this is the dyanmic way todeclead by thr css {{n}} is{{n%2==0? 'even':'odd'}}
+</p>
+
+<p [ngStyle]="n==5? {'color':'red',border:'3px solid black'}:{'color':'red',border:'2px dotted cyan'}">this is the dyanmic way todeclead by thr css {{n}} is{{n%2==0? 'even':'odd'}}
+</p>
+
+<p [ngClass]="flage? 'btn btn-primary':'btn btn-danger'">BT-1</p>
+<hr>
+
+<!-- this is the logic record is there then it will be showing otherwise one message is showing Record is not found -->
+<table *ngIf="Student1.length>0 else falseBolock">
+
+    <tr *ngFor="let student of Student1">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.salary}}</td>
+        <td>{{student.phoneNumber}}</td>
+    </tr>
+
+</table>
+<ng-template #falseBolock>
+    <p>Record Is Not There</p>
+</ng-template>

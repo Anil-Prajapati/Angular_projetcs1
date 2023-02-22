@@ -1,0 +1,136 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "FirstName": "Rahul",
+      "LastName": "Prajapati",
+      "Email": "rahulanil@gmail.com",
+      "Mobile": "9670712990",
+      "Salary": "700000"
+    },
+    {
+      "id": 3,
+      "FirstName": "kiran",
+      "LastName": "prajapati",
+      "Email": "kiran@gmail.com",
+      "Mobile": "9919105268",
+      "Salary": "500000"
+    },
+    {
+      "id": 4,
+      "FirstName": "Reena",
+      "LastName": "Prajapati",
+      "Email": "reena@gmail.com",
+      "Mobile": "8818526325",
+      "Salary": "533000"
+    },
+    {
+      "id": 5,
+      "FirstName": "Anil ",
+      "LastName": "Prajapait",
+      "Email": "anilprajapati80814895@gmail.com",
+      "Mobile": "8081489506",
+      "Salary": "2500000"
+    },
+    {
+      "id": 16,
+      "FirstName": "Sonal",
+      "LastName": "Singh",
+      "Email": "anilsonal@gmail.com",
+      "Mobile": "80814899506",
+      "Salary": "50000"
+    },
+    {
+      "id": 17,
+      "FirstName": "Pooja",
+      "LastName": "Yadav",
+      "Email": "pooja@gmail.com",
+      "Mobile": "9670712990",
+      "Salary": "80000"
+    },
+    {
+      "id": 18,
+      "FirstName": "Pooja",
+      "LastName": "Yadav",
+      "Email": "poojaanil@gmail.com",
+      "Mobile": "9670712990",
+      "Salary": "25000"
+    },
+    {
+      "id": 19,
+      "FirstName": "Rajdev ",
+      "LastName": "Mourya",
+      "Email": "rajdev@gmail.com",
+      "Mobile": "8686633234",
+      "Salary": "59000"
+    },
+    {
+      "id": 20,
+      "FirstName": "Mohimayu",
+      "LastName": "bharti",
+      "Email": "mohi@gmail.com",
+      "Mobile": "8521479632",
+      "Salary": "600000"
+    },
+    {
+      "id": 21,
+      "FirstName": "Akhil",
+      "LastName": "Singh",
+      "Email": "akhil@gmail.com",
+      "Mobile": "9919105268",
+      "Salary": "250000"
+    },
+    {
+      "id": 22,
+      "FirstName": "Sohan",
+      "LastName": "Prajapati",
+      "Email": "sohan143@gmail.com",
+      "Mobile": "8545825736",
+      "Salary": "1,80,0000"
+    },
+    {
+      "id": 23,
+      "FirstName": "Mohimanyu",
+      "LastName": "Bharti",
+      "Email": "mohimayu@gmail.com",
+      "Mobile": "8545825736",
+      "Salary": "520000"
+    },
+    {
+      "id": 24,
+      "FirstName": "Dheeraj",
+      "LastName": "Gond",
+      "Email": "gond143@gmail.com",
+      "Mobile": "6387200756",
+      "Salary": "86600"
+    },
+    {
+      "id": 25,
+      "FirstName": "Pankaj",
+      "LastName": "Prajapati",
+      "Email": "pankajazomagrah189@gmail.com",
+      "Mobile": "8982563410",
+      "Salary": "458200"
+    },
+    {
+      "id": 26,
+      "FirstName": "Devendra",
+      "LastName": "Patel",
+      "Email": "devendraland@gmail.com",
+      "Mobile": "85485258753",
+      "Salary": "800000"
+    },
+    {
+      "id": 27,
+      "FirstName": "sonu",
+      "LastName": "prajapati",
+      "Email": "sonu@gmail.com",
+      "Mobile": "6387200756",
+      "Salary": "53000"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

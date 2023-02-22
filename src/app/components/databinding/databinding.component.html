@@ -1,0 +1,87 @@
+<!-- this way to declread by the inetrpolation method in angular -->
+<div>My Name Is : {{Name}}</div>
+
+<!-- this way to declread by property Binding method in angular -->
+<div>My Name is : <span [innerHTML]="Name"></span></div>
+
+<!-- this is the another way to decleadred by the property binding method in angular -->
+<div>My Name is :<span bind-innerHTML="Name"></span></div>
+
+<!-- this is the local way to declred images and angular put the method then esay to use -->
+<img class=ms-3 src="https://tse1.mm.bing.net/th?id=OIP.6f33u_eQv4JKyS3DMQUWrwHaEK&pid=Api&P=0">
+
+<!-- this way to used image in angular provide the facality -->
+<img class=ms-3 src="{{image_url}}">
+
+<!--this is the good way to decleared by the image and any thing use the interpolation method or property binding  -->
+<img src="{{keritySetty}}" class="ms-3 ">
+
+<!-- this is the decleared by the property binding in images -->
+<img [src]="image_url" class="ms-3 ">
+
+
+<img [src]="rashamika_madhana" class="ms-3 ">
+<img src="{{rashamika_madhana}}" class="ms-3 ">
+<img src="{{ rashamika_madhana}}" class="ms-3 ">
+
+<img [src]="rashamika_mandhana" class="ms-3 ">
+
+<hr>
+
+<input value="Anil Kumar Prajapati" />
+<input value="{{Name}}" class="ms-3 " />
+<input [value]="Name" class="ms-3 " />
+
+<input bind-value="Name" class="ms-3 " /><br><br>
+
+<!-- this is the buttom to used flage  boolean value and interfolation is that not working but property binding is working -->
+<button disabled="{{flage}}" class="btn btn-primary">BTN-1</button>&nbsp;&nbsp;
+
+<!-- this is the method of the peoprtity binding is working proper way but ietrpolation in not working in between doing that property binding -->
+<button [disabled]="flage" class="btn btn-primary ">BTN-2</button>&nbsp;&nbsp;
+<button bind-disabled="flage" class="btn btn-primary ">BTN-3</button>&nbsp;&nbsp;
+
+<!-- this is the Event Components view to components -->
+<button (click)="f1()" class="btn btn-secondary">BTN-4</button>&nbsp;&nbsp;
+<button on-click="f1()" class="btn btn-secondary">BTN-5</button>
+
+
+<hr>
+<h1 [hidden]="flage">this is the my paragraph</h1>
+
+<!-- this is the method is also working in angular -->
+<button (click)="toggelShow()" class="btn btn-danger">show/hidde</button>&nbsp;
+
+
+<!-- this is the way to decleard by the angular -->
+<button (click)="this.flage=!this.flage" class="btn btn-danger">show/hide</button>&nbsp;
+
+
+<!-- this is the dyamically working and other things is ok but in this way using java script do that  -->
+<button (click)="this.flage=!this.flage" class="btn btn-danger">{{flage? 'show':'hide'}}</button>
+
+<!-- this is the hide and show the password -->
+<input [type]="inputtype">
+<button (click)="Toggale()" class="btn btn-danger">show/hidde</button>&nbsp;
+
+<hr> this is the hide and show the password -->
+<input type="{{flage? 'password':'text'}}" class="ms-5">&nbsp;
+<input type="checkbox" (change)="this.flage=!this.flage">
+<button (click)="this.flage=!this.flage" class="btn btn-danger">{{flage ? 'show':'hide'}}</button>&nbsp;
+
+<hr>
+<!--this is the 2-way databinding  -->
+
+<p> Number-1:<input type="number" [(ngModel)]="a"></p>
+<p> Number-2:<input type="number" [(ngModel)]="b"></p>
+
+<div>Addition of {{a}} & {{b}} is {{a+b}}</div>
+<div>Substraction of {{a}} & {{b}} is {{a-b}}</div>
+<div>multiplication of {{a}} & {{b}} is {{a*b}}</div>
+<div>Devision of {{a}} & {{b}} is {{a/b}}</div>
+
+<textarea [(ngModel)]="msg" [maxlength]="maxChar" cols="30" rows="10"></textarea>
+
+<div>Message:{{msg}}</div>
+<div>Reamaining:{{maxChar-msg.length}}</div>
+<hr>

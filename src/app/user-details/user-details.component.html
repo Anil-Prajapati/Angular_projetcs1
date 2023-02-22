@@ -1,0 +1,81 @@
+<!-- this is the showing the table formating data into the data base but this much not goot but ok-->
+<!--  <table id="customers"> 
+<thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">first_name</th>
+        <th scope="col">last_name</th>
+        <th scope="col">email</th>
+        <th scope="col">country</th>
+        <th scope="col">modified</th>
+        <th scope="col">vip</th>
+    </tr>
+    <tr *ngFor="let user of usersDetails">
+        <td>{{user.id}}</td>
+        <td>{{user.first_name}}</td>
+        <td>{{user.last_name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.country}}</td>
+        <td>{{user.modified}}</td>
+        <td>{{user.vip}}</td>
+    </tr>
+</thead>
+</table> -->
+
+
+<!-- <table id="customers">
+    <thead>
+        <th *ngFor="let column of colName">
+            {{column}}
+        </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of usersDetails">
+
+            <td *ngFor="let enter of user | keyvalue">
+                {{enter.value}}
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+
+
+<!-- <table id="customers">
+
+    <tr>
+        <th>id</th>
+        <th>first_name</th>
+        <th>last_name</th>
+        <th>email</th>
+        <th>country</th>
+        <th>modified</th>
+        <th>vip</th>
+    </tr>
+
+    <tr *ngFor="let user of usersDetails">
+        <td>{{user.id}}</td>
+        <td>{{user.first_name}}</td>
+        <td>{{user.last_name}}</td>
+        <td>{{user.country}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.modified}}</td>
+        <td>{{user.vip}}</td>
+    </tr>
+</table> -->
+
+<!-- this is the way of the good decleadation of thr table json data -->
+<table id="customers">
+    <thead>
+        <th *ngFor="let column of colName">
+            {{column}}
+        </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of usersDetails">
+            <td *ngFor="let enter of user | keyvalue">
+                {{enter.value}}
+            </td>
+        </tr>
+    </tbody>
+
+</table>
